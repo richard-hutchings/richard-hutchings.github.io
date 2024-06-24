@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/snowyMountain.jpg");
+}
+
+header {
+  font-size: 50px;
+  font-weight: bolder;
+  color: blue;
+  padding-top: 50px;
+}
+
+h1 {
+  padding: 15px;
+}
+
+.display {
+  height: 100%;
+  width: 40%;
+  float: right;
+}
+
+.square {
+  width: 192px;
+  height: 192px;
+  border-style: solid;
+  border-color: black;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  width: 600px;
+  height: 600px;
+}
+
+.yeti {
+  background-image: url("../images/yeti.png");
+  background-size: cover;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+
+i {
+  font-size: "21px";
+  color: green;
+}

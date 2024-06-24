@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Tetris</title>
+    <style>
+      body {
+        background-image: url("../images/tetrisBackground.jpg");
+        background-color: #202028;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 2em;
+        text-align: center;
+        height: 100%;
+      }
+      canvas {
+        border: solid 0.2em darkgreen;
+        height: 90vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="score"></div>
+    <canvas id="tetris" width="240" height="400"></canvas>
+    <script src="./game.js"></script>
+  </body>
+</html>
+<!-- with thanks to Meth Meth Method
+https://www.youtube.com/watch?v=H2aW5V46khA -->
