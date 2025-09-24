@@ -153,32 +153,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<!-- Contact -->
 						<article id="contact">
 							<h2 class="major">Contact</h2>
-							<form method="post" action="mailto:richardhutchings09@gmail.com">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="primary" /></li>
-									<li><input type="reset" value="Reset" /></li>
-								</ul>
+							<form id="contactForm">
+							  <div class="fields">
+							    <div class="field half">
+							      <label for="name">Name</label>
+							      <input type="text" name="name" id="name" required />
+							    </div>
+							    <div class="field half">
+							      <label for="email">Email</label>
+							      <input type="email" name="email" id="email" required />
+							    </div>
+							    <div class="field">
+							      <label for="message">Message</label>
+							      <textarea name="message" id="message" rows="4" required></textarea>
+							    </div>
+							  </div>
+							  <ul class="actions">
+							    <li><button type="submit" class="primary">Send Message</button></li>
+							    <li><input type="reset" value="Reset" /></li>
+							  </ul>
 							</form>
 							<ul class="icons">
 								<li><a href="https://www.linkedin.com/in/richardhutchings09/" class="icon brands fab fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 								<li><a href="https://github.com/richard-hutchings" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								<li><a href="https://webdragon93.github.io" class="fas fa-dragon" target="_blank"><span class="label"></span></a></li>
-							</ul>
-			
+							</ul>			
 						</article>
 
 			<!-- Footer -->
@@ -193,6 +192,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 
 	<!-- Scripts -->
+		<script>
+			document.getElementById("contactForm").addEventListener("submit", function(e) {
+			  e.preventDefault(); // stop normal form submit
+			
+			  const name = encodeURIComponent(document.getElementById("name").value);
+			  const email = encodeURIComponent(document.getElementById("email").value);
+			  const message = encodeURIComponent(document.getElementById("message").value);
+			
+			  // Build mailto link
+			  const subject = `Contact Form Submission from ${name}`;
+			  const body = `Name: ${name}%0AEmail: ${email}%0AMessage:%0A${message}`;
+			  
+			  window.location.href = `mailto:richardhutchings09@gmail.com?subject=${subject}&body=${body}`;
+			});
+		</script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
@@ -201,6 +215,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 </html>
+
 
 
 
